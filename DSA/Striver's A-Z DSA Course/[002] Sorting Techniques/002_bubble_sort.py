@@ -49,13 +49,24 @@ def bubble_sort(arr):
     for i in range(n-1, -1, -1):                        # last to 1st
         did_swap = False
 
-        for j in range(0, i):                           # 1st to i-1
+        for j in range(0, i):                           # 1st to i-1 (2nd last)
             if arr[j] > arr[j+1]:                       # ASC - > | DESC - <
                 arr[j], arr[j+1] = arr[j+1], arr[j]
                 did_swap = True
         
         if not did_swap:
             break
+
+
+def recursive_bubble_sort(arr, n):
+    if n == 1:                                          # When only 1 element, do nothing
+        return
+    
+    for j in range(0, n-1):                             # 1st to 2nd last
+        if arr[j] > arr[j+1]:                           # ASC - > | DESC - <
+            arr[j], arr[j+1] = arr[j+1], arr[j]
+    
+    recursive_bubble_sort(arr, n-1)                     # last to 1st
 
 
 if __name__ == '__main__':
@@ -65,4 +76,10 @@ if __name__ == '__main__':
     print(f'Original = {arr}')
 
     bubble_sort(arr)
+    print(f'Ascending = {arr}')
+
+    arr = [5,3,5,7,8,2]
+    print(f'Original = {arr}')
+
+    recursive_bubble_sort(arr, len(arr))
     print(f'Ascending = {arr}')
