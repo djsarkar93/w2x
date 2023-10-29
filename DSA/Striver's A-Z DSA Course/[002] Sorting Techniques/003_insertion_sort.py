@@ -47,14 +47,14 @@ def insertion_sort(arr):
         arr[j+1] = tmp
 
 
-def recursive_insertion_sort(arr, n):
-    if n <= 1:
+def recursive_insertion_sort(arr, end):
+    if end <= 0:
         return
     
-    recursive_insertion_sort(arr, n-1)
+    recursive_insertion_sort(arr, end-1)
 
-    tmp = arr[n-1]
-    j = n-2
+    tmp = arr[end]
+    j = end - 1
     while j >= 0 and arr[j] > tmp:
         arr[j+1] = arr[j]
         j -= 1
@@ -75,5 +75,5 @@ if __name__ == '__main__':
     arr = [5,4,10,1,6,2]
     print(f'Original = {arr}')
 
-    recursive_insertion_sort(arr, len(arr))
+    recursive_insertion_sort(arr, end=len(arr)-1)
     print(f'Ascending = {arr}')
