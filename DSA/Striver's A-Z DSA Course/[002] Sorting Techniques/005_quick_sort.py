@@ -6,9 +6,9 @@ A Divide & Conquer algorithm
 Unstable Sort
 ########################################################################################################################
 Space Complexity:
-    Best:       O( log n )
-    Average:    O( log n )
-    Worst:      O( n )
+    Best:       O( 1 ) + O( log n )     [Where, O(log n) is the auxiliary stack space]
+    Average:    O( 1 ) + O( log n )     [Where, O(log n) is the auxiliary stack space]
+    Worst:      O( 1 ) + O( n )         [Where, O(n)     is the auxiliary stack space]
 ########################################################################################################################
 Time Complexity:
     Best:       O( n log n )
