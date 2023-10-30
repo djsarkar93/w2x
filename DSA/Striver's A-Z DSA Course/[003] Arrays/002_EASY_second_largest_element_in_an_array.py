@@ -1,5 +1,5 @@
 """
-Find the second largest and smallest element in an array
+Find the second largest and the second smallest elements in an array
 """
 import os
 
