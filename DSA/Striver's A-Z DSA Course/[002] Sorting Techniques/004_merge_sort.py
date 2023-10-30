@@ -11,7 +11,7 @@ Usecase:
     External Sorting - Ideal when dataset exceed memory capacity, using sequential external storage operations.
     Linked List - Effective for sorting linked lists by reordering links, minimizing data handling overhead.
 ########################################################################################################################
-Space Complexity: O( n )
+Space Complexity: O( n ) + O( log n )     [Where, O(log n) is the auxiliary stack space]
 ########################################################################################################################
 Time Complexity:
     Best:       O( n log n )
