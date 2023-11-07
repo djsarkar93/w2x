@@ -69,12 +69,7 @@ def missing_number_BTR(arr):
 ########################################################################################################################
 # Optimal Solution 1
 # Approach: 
-#   [1] Two important properties of XOR
-#       a ^ a = 0
-#       0 ^ a = a
-#   [2] xor1 = XOR all the numbers in the given array
-#   [3] xor2 = XOR all the numbers between 1 to N
-#   [4] xor1 ^ xor2
+#   [1] SUM(0 to n) - SUM(arr)
 # Time Complexity:  O( n )
 # Space Complexity: O( 1 )
 ########################################################################################################################
