@@ -1,5 +1,5 @@
 """
-Count Maximum Consecutive One’s in the array
+Count maximum consecutive 1s in the array
 ########################################################################################################################
 Given a binary array nums, return the maximum number of consecutive 1's in the array.
 ########################################################################################################################
@@ -16,7 +16,15 @@ Example 2:
 import os
 
 
-def find_max_consecutive_ones(arr):
+########################################################################################################################
+# Optimal Solution
+# Approach: 
+#   [1] Iterate over the array and count the number of consecutive 1s
+#   [2] Return MAX(number of consecutive 1s) 
+# Time Complexity:  O( n )
+# Space Complexity: O( 1 )
+########################################################################################################################
+def find_max_consecutive_ones_OPT(arr):
     n = len(arr)
     maxi = 0
     count = 0
@@ -35,4 +43,4 @@ if __name__ == '__main__':
     arr = [1, 1, 0, 1, 1, 1, 0, 1, 1]
     print(f'Original: {arr}')
 
-    print(f'The maximum consecutive 1\'s are: {find_max_consecutive_ones(arr)}')
+    print(f'The maximum consecutive 1\'s are: {find_max_consecutive_ones_OPT(arr)}')
