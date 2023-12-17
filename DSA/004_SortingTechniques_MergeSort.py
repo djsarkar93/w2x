@@ -14,7 +14,7 @@ def merge(arr, start, mid, end):
     ridx = mid + 1
     
     while lidx <= mid and ridx <= end:
-        if arr[lidx] < arr[ridx]:
+        if arr[lidx] <= arr[ridx]:
             merged_list.append( arr[lidx] )
             lidx += 1 
         else:
