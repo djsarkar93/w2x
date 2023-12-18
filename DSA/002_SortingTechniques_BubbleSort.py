@@ -24,7 +24,7 @@ def bubble_sort(arr):
 
 
 def bubble_sort_recursive(arr, end):
-    if end <= 1:
+    if end <= 0:
         return
     
     did_swap = False
