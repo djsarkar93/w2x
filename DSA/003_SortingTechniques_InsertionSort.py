@@ -22,7 +22,22 @@ def insertion_sort(arr):
         arr[j+1] = bkp
 
 
-arr = [5,3,5,7,8,2]
+def insertion_sort_recursive(arr, end):
+    if end <= 0:
+        return
+    
+    insertion_sort_recursive(arr, end-1)
+    
+    bkp = arr[end]
+    j = end-1
+    while j >= 0 and arr[j] > bkp:
+        arr[j+1] = arr[j]
+        j -= 1 
+    
+    arr[j+1] = bkp
+
+
+arr = [5,4,10,1,6,2]
 print(f'arr = {arr}')
 
 insertion_sort(arr)
