@@ -23,6 +23,23 @@ def bubble_sort(arr):
             break
 
 
+def bubble_sort_recursive(arr, end):
+    if end <= 1:
+        return
+    
+    did_swap = False
+    
+    for j in range(0, end):
+        if arr[j] > arr[j+1]:
+            arr[j], arr[j+1] = arr[j+1], arr[j]
+            did_swap = True
+    
+    if not did_swap:
+        return
+    
+    bubble_sort_recursive(arr, end-1)
+
+
 arr = [5,3,5,7,8,2]
 print(f'arr = {arr}')
 
